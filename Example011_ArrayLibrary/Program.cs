@@ -22,6 +22,28 @@ void PrintArray(int[] col)  // void невозвратный метод    // в
 
 int[] array = new int[10]; // new int[] создает новый массив с "0", 10 - коллличество элементов 
 
+int IndexOf(int[] collection, int find)
+    {
+        int count = collection.Length;
+        int index = 0;
+        int position = -1;
+
+        while (index < count)
+            {
+                if (collection[index] == find)
+                    {
+                        position = index;
+                        break;
+                    }
+                index++;
+            }
+        return position;
+    }
+
 FillArray(array);
 PrintArray(array);
+Console.WriteLine();
+
+int pos = IndexOf(array, 444);
+Console.WriteLine(pos);
 
